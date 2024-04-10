@@ -67,10 +67,10 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = 'No, I do not agree'
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = 'In this case, each coin flip has an error rate of 0.5 and 1000 flips is considered an ensemble of independent classifiers here. Though it is true that ensemble of independent classifiers could potentially get better prediction only if the error rate is less than 0.5 because of Condorcets jury theorem'
     return answers
 
 
