@@ -79,13 +79,13 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = None
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
-    answers['(b), independent'] = None
+    answers['(b), independent'] = True
 
     # type: bool
-    answers['(c) identical'] = None
+    answers['(c) identical'] = False
     return answers
 
 
@@ -116,7 +116,7 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = None    
 
     # type: eval_float
     answers['(a) C2-TPR'] = None
