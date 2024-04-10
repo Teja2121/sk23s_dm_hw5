@@ -10,15 +10,15 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    answers['(a)'] = None
+    answers['(a)'] = 0.0288
 
     # type: float
     # Calculate the probability.
-    answers['(b)'] = None
+    answers['(b)'] = 0.002
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = None
+    answers['(c)'] = 0.08
     return answers
 
 
