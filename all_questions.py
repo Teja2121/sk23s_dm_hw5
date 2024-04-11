@@ -58,7 +58,7 @@ def question2():
     # a valid Python expression. Use the functions in the math module as
     # required.
     # forumula in terms of p is: (1/2) * (ln((1-p)/p)) = 0.5 * ln((1-0.3)/0.3) = 0.4236489301936019
-    p = 0.3
+    #p = 0.3
     # proper expression on python is ((1/2)) * math.log((1 - p) / p))
     answers['(c) Weight update'] = '((1/2) * ln((1 - p) / p))'
     print(answers['(c) Weight update'])
@@ -183,23 +183,26 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = 0.1
+    # precision is tp/tp+fp = ((100*p)/((100*p)+(900*p))) = (100*p)/(1000*p) = 0.1
+    answers['(a) precision for C0'] = '((100*p)/((100*p)+(900*p)))'
 
     # type: eval_float
-    answers['(a) recall for C0'] = 'p'
+    # recall is tp/(tp + fn) = ((100*p)/((100*p)+(100*(1-p)))) = ((100*p)/((100*p)-(100*p)+100)) = p
+    answers['(a) recall for C0'] = '((100*p)/((100*p)+(900*(1-p))))'
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = None
+    #f-measure is 2*((precision * recall)/(precision + recall))
+    answers['(b) F-measure of C0'] = '(2*((0.1*p)/(0.1+P)))'
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] = 'unknown'
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
-
-    answers['p-range'] = None
+    # if we calculate (2*((0.1*p)/(0.1+P))) = 15, then p = 0.3. So p should be greater than 0.3 for C1 to beat random classifier.
+    answers['p-range'] = 0.3
     return answers
 
 
