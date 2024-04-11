@@ -208,18 +208,22 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    #recall = tp/(tp+fn) = 80/(80+70) = 0.533333333333333333
+    #precision = tp/(tp+fp) = 80/(80+50) = 0.61538461538461538
+    #f-measure =  2 * ((precison * recall)/(precison + recall)) = 2 * ((0.61538461538461538 * 0.533333333333333333)/(0.61538461538461538 + 0.533333333333333333)) = 0.571428571428571428571
+    #accuracy = (tp+tn)/(tp+tn+fp+fn) = (80+800) / 1000 = 0.88
+    answers['(i) metrics'] = {'recall' : 0.533333333333333333, 'precision' : 0.61538461538461538, 'F-measure' : 0.571428571428571428571, 'accuracy' : 0.88}
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'F-measure'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = 'There is a class imbalance in this case where there are less positive cases and more negative cases, so accuracy is not good and in this situation F-1 measure is better.'
     return answers
 
 
