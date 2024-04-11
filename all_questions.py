@@ -1,7 +1,7 @@
 import pytest
 from all_questions import *
 import pickle
-
+import math
 
 
 #-----------------------------------------------------------
@@ -51,16 +51,19 @@ def question2():
     answers['(b) C'] = True
 
     # type: bool
-    answers['(b) D'] = False
+    answers['(b) D'] = True
 
     # type: eval_float
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = 0.4236489301936019
-
+    # forumula in terms of p is: (1/2) * (ln((1-p)/p)) = 0.5 * ln((1-0.3)/0.3) = 0.4236489301936019
+    p = 0.3
+    answers['(c) Weight update'] = 0.5 * math.log((1 - p) / p)
+    print(answers['(c) Weight update'])
     # type: float
     # the answer should be correct to 3 significant digits
+    # 1 * e^(0.42364893019360184)
     answers['(d) Weight influence'] = 1.5275252
     return answers
 
