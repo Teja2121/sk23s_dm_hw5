@@ -123,31 +123,37 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None  
+    #c1 - tp = 100*p, fp = 900*p, tn = 900 * (1-p), fn = 100 * (1-p)
+    #c1 - tpr = tp/tp+fn = ((100*p)/((100*p) + (100*(1-p))))
+    answers['(a) C1-TPR'] = '((100*p)/((100*p) + (100*(1-p))))' 
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    #c2 - tp = 100*2*p, fp = 900*2*p, tn = 900 * (1-(2*p)), fn = 100 * (1-(2*p))
+    #c2 - tpr = tp/tp+fn = ((100*2*p)/((100*2*p) + (100*(1-(2*p)))))
+    answers['(a) C2-TPR'] = '((100*2*p)/((100*2*p) + (100*(1-(2*p)))))'
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    #c1 - fpr = fp/(fp+tn) = ((900*p)/((900*p)+(900*(1-p))))
+    answers['(a) C1-FPR'] = '((900*p)/((900*p)+(900*(1-p))))'
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    #c2 - fpr = fp/(fp+tn) = ((900*2*p)/((900*2*p)+(900*(1-(2*p)))))
+    answers['(a) C2-FPR'] = '((900*2*p)/((900*2*p)+(900*(1-(2*p)))))'
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = 'no'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = 'The hint about random guess line in a ROC is TPR = FPR, neither C1 nor C2 would be considered better than random guessing if p = 0.5. Since C2 classifies positives with twice the probability of C1 and C2s FPR will increase more if p<0.5 which may make it a worse classifier.'
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = 'Using precision and recall as evaluation metrics, C2 appears to be a better classifier than C1 because it has a higher recall. However, the TPR and FPR pair correctly indicates the relative performance of C2 and C1 because it considers both the benefit of correctly predicting positives and the cost of incorrectly predicting negatives.'
     return answers
 
 
@@ -157,7 +163,7 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = 'None'
 
     # type: explain_string
     answers['(i) Best classifier, explain'] = None
