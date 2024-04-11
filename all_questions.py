@@ -166,21 +166,21 @@ def question7():
     answers['(i) Best classifier?'] = 'None'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = 'C2 classifier is not better than random guessing, while C1 classifier is more skewed towards the negative cases.'
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = 'precision-recall-F1-Measure'
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = 'The pair precision-recall-F1-Measure is typically more informative for classifier performance, especially when dealing with class imbalances. The F1-measure is particularly valuable because it combines precision and recall into a single metric that accounts for both false positives and false negatives.'
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = 'C3'
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = 'C3 is better because it is the best out of the given classifiers. While C2 is random guessing, C1 is more skewed towards negative examples, C3 seems slightly better than these 2. It also has higher precision, higher recall than C1, better F-1 measure than C1.'
     return answers
 
 
