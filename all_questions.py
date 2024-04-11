@@ -1,7 +1,7 @@
 import pytest
 from all_questions import *
 import pickle
-import math
+
 
 
 #-----------------------------------------------------------
@@ -59,7 +59,8 @@ def question2():
     # required.
     # forumula in terms of p is: (1/2) * (ln((1-p)/p)) = 0.5 * ln((1-0.3)/0.3) = 0.4236489301936019
     p = 0.3
-    answers['(c) Weight update'] = '(0.5 * ln((1 - p) / p))'
+    # expression on python is ((1/2)) * math.log((1 - p) / p))
+    answers['(c) Weight update'] = '((1/2)) * ln((1 - p) / p))'
     print(answers['(c) Weight update'])
     # type: float
     # the answer should be correct to 3 significant digits
