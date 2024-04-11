@@ -10,15 +10,18 @@ def question1():
 
     # type: float
     # Calculate the probability.
+    # P(B=good) * P(F=empty) * P(G=empty∣B=good,F=empty) * P(S=yes∣B=good,F=empty) = 0.9 * 0.2 * 0.8 * 0.2
     answers['(a)'] = 0.0288
 
     # type: float
     # Calculate the probability.
+    # P(B=bad) * P(F=empty) * P(G=notempty∣B=bad,F=empty) * P(S=no∣B=bad,F=empty) = 0.1 * 0.2 * 0.1 * 1.0
     answers['(b)'] = 0.002
 
     # type: float
     # Calculate the probability.
-    answers['(c)'] = 0.08
+    # we have to calculate P(S=yes|B=bad) = P(S=yes|B=bad,F=empty) + P(S=yes|B=bad,F=notempty) = 0 + 0.1
+    answers['(c)'] = 0.1
     return answers
 
 
