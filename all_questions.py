@@ -76,7 +76,7 @@ def question3():
     answers['Agree?'] = 'No, I do not agree'
 
     # type: explain_string
-    answers['Explain'] = 'In this case, each coin flip has an error rate of 0.5 and 1000 flips is considered an ensemble of independent classifiers here. Though it is true that ensemble of independent classifiers could potentially get better prediction only if the error rate is less than 0.5 because of Condorcets jury theorem'
+    answers['Explain'] = 'In this case, each coin flip has an error rate of 0.5 and 1000 flips is considered an ensemble of independent classifiers here. Though it is true that ensemble of independent classifiers could potentially get better prediction only if the error rate is less than 0.5. The ground probability would not change.'
     return answers
 
 
@@ -229,21 +229,21 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = 'T1'
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = 'T2'
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = 'TPR/FPR is better because in this case, class imbalance (skew) is not known. T2 also has lower FPR but the same TPR.'
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = 'If there is class imbalance case and lets say if there is an email service for filtering spam email, using TPR/FPR might not be good because even if FPR is low, many emails get misclassified to spam even if they might be legit. So F1 score is better because it balances catching as many spam emails as possible (high recall) with not marking good emails as spam (high precision)'
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
