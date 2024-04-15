@@ -20,8 +20,8 @@ def question1():
 
     # type: float
     # Calculate the probability.
-    # we have to calculate P(S=yes|B=bad) = P(S=yes|B=bad,F=empty) + P(S=yes|B=bad,F=notempty) = 0 + 0.1
-    answers['(c)'] = 0.1
+    # we have to calculate P(S=yes|B=bad) = (P(S=yes|B=bad,F=empty) * P (F=empty)) + (P(S=yes|B=bad,F=notempty) * P(notempty)) = (0*0.2) + (0.1*0.8)
+    answers['(c)'] = 0.08
     return answers
 
 
