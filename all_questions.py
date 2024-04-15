@@ -194,7 +194,7 @@ def question8():
 
     # type: eval_float
     # recall is tp/(tp + fn) = ((100*p)/((100*p)+(100*(1-p)))) = ((100*p)/((100*p)-(100*p)+100)) = p
-    answers['(a) recall for C0'] = '((100*p)/((100*p)+(900*(1-p))))'
+    answers['(a) recall for C0'] = '((100*p)/((100*p)+(100*(1-p))))'
 
     # type: eval_float
     #f-measure is 2*((precision * recall)/(precision + recall))
