@@ -202,7 +202,7 @@ def question8():
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = 'unknown'
+    answers['C1 better than random?'] = 'yes'
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
