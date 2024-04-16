@@ -1,4 +1,3 @@
-import math
 import pytest
 from all_questions import *
 import pickle
